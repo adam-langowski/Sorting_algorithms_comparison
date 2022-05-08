@@ -1,0 +1,283 @@
+Algorytmy sortowania 
+Cel projektu : 
+•	Zaprojektowanie algorytmów sortujących 
+•	Wykonanie eksperymentów obliczeniowych – pomiar czasu pracy algorytmu przy różnych generatorach instancji (wartości losowe – random; rosnące – increasing; malejące – decreasing; rozkład V-kształtny – V-shape)
+•	Wnioski nt. wyników pracy poszczególnych algorytmów 
+WYNIKI: 
+	SELECTION SORT
+Algorytm	Instancja	Elementy	Czas (s)
+SelectionSort	Random	10000	0.074
+SelectionSort	Random	20000	0.286
+SelectionSort	Random	30000	0.634
+SelectionSort	Random	40000	1.149
+SelectionSort	Random	50000	1.756
+SelectionSort	Random	60000	2.483
+SelectionSort	Random	70000	3.375
+SelectionSort	Random	80000	4.401
+SelectionSort	Random	90000	5.579
+SelectionSort	Random	100000	7.006
+Algorytm	Instancja	Elementy	Czas (s)
+SelectionSort	Increasing	10000	0.069
+SelectionSort	Increasing	20000	0.275
+SelectionSort	Increasing	30000	0.622
+SelectionSort	Increasing	40000	1.103
+SelectionSort	Increasing	50000	1.746
+SelectionSort	Increasing	60000	2.506
+SelectionSort	Increasing	70000	3.457
+SelectionSort	Increasing	80000	4.809
+SelectionSort	Increasing	90000	5.645
+SelectionSort	Increasing	100000	7.038
+Algorytm	Instancja	Elementy	Czas (s)
+SelectionSort	Decreasing	10000	0.071
+SelectionSort	Decreasing	20000	0.288
+SelectionSort	Decreasing	30000	0.648
+SelectionSort	Decreasing	40000	1.152
+SelectionSort	Decreasing	50000	1.789
+SelectionSort	Decreasing	60000	2.63
+SelectionSort	Decreasing	70000	3.535
+SelectionSort	Decreasing	80000	4.598
+SelectionSort	Decreasing	90000	5.847
+SelectionSort	Decreasing	100000	7.395
+Algorytm	Instancja	Elementy	Czas (s)
+SelectionSort	V-Shape	10000	0.07
+SelectionSort	V-Shape	20000	0.281
+SelectionSort	V-Shape	30000	0.631
+SelectionSort	V-Shape	40000	1.123
+SelectionSort	V-Shape	50000	1.754
+SelectionSort	V-Shape	60000	2.548
+SelectionSort	V-Shape	70000	3.435
+SelectionSort	V-Shape	80000	4.461
+SelectionSort	V-Shape	90000	5.879
+SelectionSort	V-Shape	100000	7.355
+
+Sortowanie te polega na wyszukaniu najmniejszego elementu z całej tablicy i wstawieniu go na następny element posortowanej tablicy.
+Gdy najmniejszy element zamienimy na największy, wówczas tablica będzie posortowana od największego do najmniejszego elementu.
+Złożoność czasowa:  O(n2)
+
+
+
+	INSERTION SORT
+Algorytm	Instancja	Elementy	Czas (s)
+InsertionSort	Random	10000	0.047
+InsertionSort	Random	20000	0.186
+InsertionSort	Random	30000	0.415
+InsertionSort	Random	40000	0.758
+InsertionSort	Random	50000	1.157
+InsertionSort	Random	60000	1.672
+InsertionSort	Random	70000	2.284
+InsertionSort	Random	80000	3.017
+InsertionSort	Random	90000	3.805
+InsertionSort	Random	100000	4.754
+Algorytm	Instancja	Elementy	Czas (s)
+InsertionSort	Increasing	10000	0
+InsertionSort	Increasing	20000	0
+InsertionSort	Increasing	30000	0
+InsertionSort	Increasing	40000	0
+InsertionSort	Increasing	50000	0
+InsertionSort	Increasing	60000	0
+InsertionSort	Increasing	70000	0
+InsertionSort	Increasing	80000	0.001
+InsertionSort	Increasing	90000	0.001
+InsertionSort	Increasing	100000	0
+
+Algorytm	Instancja	Elementy	Czas (s)
+InsertionSort	Decreasing	10000	0.092
+InsertionSort	Decreasing	20000	0.371
+InsertionSort	Decreasing	30000	0.833
+InsertionSort	Decreasing	40000	1.483
+InsertionSort	Decreasing	50000	2.321
+InsertionSort	Decreasing	60000	3.354
+InsertionSort	Decreasing	70000	4.565
+InsertionSort	Decreasing	80000	5,97
+InsertionSort	Decreasing	90000	7.563
+InsertionSort	Decreasing	100000	9.638
+Algorytm	Instancja	Elementy	Czas (s)
+InsertionSort	V-Shape	10000	0.046
+InsertionSort	V-Shape	20000	0.186
+InsertionSort	V-Shape	30000	0.413
+InsertionSort	V-Shape	40000	0.743
+InsertionSort	V-Shape	50000	1.159
+InsertionSort	V-Shape	60000	1.669
+InsertionSort	V-Shape	70000	2.265
+InsertionSort	V-Shape	80000	2,97
+InsertionSort	V-Shape	90000	3.793
+InsertionSort	V-Shape	100000	4.704
+
+Sortowanie działa następująco:
+Najpierw bierzemy dowolny element ze zbioru nieposortowanego. Następnie porównujemy go z kolejnymi elementami zbioru posortowanego, aż nie napotkamy elementu równego lub większego, bądź nie znajdziemy się na początku/końcu zbioru posortowanego. Wyciągnięty element wstawiamy na miejsce gdzie skończyliśmy porównywać.
+Złożoność czasowa: O(n2)
+Jak widzimy algorytm prezentuje się lepiej od ‘selection sort’ w każdej instancji poza ‘decreasing’. W tym wypadku algorytm musi przejść za każdym razem wiele elementów aby napotkać na poszukiwany, większy element od wybranego elementu ze zbioru nieposortowanego. Przy generatorze instancji ‘increasing’ widoczne zera to oczywiście przybliżenie, rzeczywisty czas działania jest po prostu mniejszy od 0,001s.
+
+
+
+	QUICK SORT
+Algorytm	Instancja	Elementy	Czas (s)
+QuickSort	Random	10000	0.001
+QuickSort	Random	20000	0.001
+QuickSort	Random	30000	0.002
+QuickSort	Random	40000	0.003
+QuickSort	Random	50000	0.004
+QuickSort	Random	60000	0.005
+QuickSort	Random	70000	0.005
+QuickSort	Random	80000	0.006
+QuickSort	Random	90000	0.008
+QuickSort	Random	100000	0.008
+Algorytm	Instancja	Elementy	Czas (s)
+QuickSort	Increasing	10000	0
+QuickSort	Increasing	20000	0.001
+QuickSort	Increasing	30000	0.001
+QuickSort	Increasing	40000	0
+QuickSort	Increasing	50000	0.001
+QuickSort	Increasing	60000	0.001
+QuickSort	Increasing	70000	0.001
+QuickSort	Increasing	80000	0.001
+QuickSort	Increasing	90000	0.001
+QuickSort	Increasing	100000	0.001
+
+Algorytm	Instancja	Elementy	Czas (s)
+QuickSort	Decreasing	10000	0
+QuickSort	Decreasing	20000	0.001
+QuickSort	Decreasing	30000	0.001
+QuickSort	Decreasing	40000	0.001
+QuickSort	Decreasing	50000	0.001
+QuickSort	Decreasing	60000	0.001
+QuickSort	Decreasing	70000	0.001
+QuickSort	Decreasing	80000	0.002
+QuickSort	Decreasing	90000	0.002
+QuickSort	Decreasing	100000	0.001
+Algorytm	Instancja	Elementy	Czas (s)
+QuickSort	V-Shape	10000	0.001
+QuickSort	V-Shape	20000	0.004
+QuickSort	V-Shape	30000	0.003
+QuickSort	V-Shape	40000	0.005
+QuickSort	V-Shape	50000	0.005
+QuickSort	V-Shape	60000	0.011
+QuickSort	V-Shape	70000	0.012
+QuickSort	V-Shape	80000	0.015
+QuickSort	V-Shape	90000	0.017
+QuickSort	V-Shape	100000	0.012
+
+
+Quick sort jest metodą rekurencyjną, co umożliwia znacznie szybsze działanie algorytmu. 
+Na początku wybiera się tzw. element osiowy (pewien element tablicy np. jej środek), po czym na początek tablicy przenoszone są wszystkie elementy mniejsze od niego, na koniec większe, a w powstałe między tymi obszarami puste miejsca trafia wybrany element. Następnie sortuje się osobno początkową i końcową część tablicy.
+Średnia złożoność czasowa: О(n log(n))
+Pesymistyczna wersja : O(n2)
+Jak widzimy po wynikach w tabeli, sortowanie nawet 100 tys. elementów odbywa się już bardzo szybko. Wyniki dla instancji ‘increasing’ wynoszą w kilku miejscach 0, lecz oczywiście jest to przybliżenie, a rzeczywista prędkość sortowania jest mniejsza od 0.001 sekundy.
+
+
+
+	RANDOMIZED QUICK SORT
+Algorytm	Instancja	Elementy	Czas
+RandomizedQuickSort	Random	10000	0.001
+RandomizedQuickSort	Random	20000	0.002
+RandomizedQuickSort	Random	30000	0.003
+RandomizedQuickSort	Random	40000	0.004
+RandomizedQuickSort	Random	50000	0.006
+RandomizedQuickSort	Random	60000	0.007
+RandomizedQuickSort	Random	70000	0.008
+RandomizedQuickSort	Random	80000	0.01
+RandomizedQuickSort	Random	90000	0.011
+RandomizedQuickSort	Random	100000	0.011
+Algorytm	Instancja	Elementy	Czas (s)
+RandomizedQuickSort	Increasing	10000	0.001
+RandomizedQuickSort	Increasing	20000	0.001
+RandomizedQuickSort	Increasing	30000	0.002
+RandomizedQuickSort	Increasing	40000	0.003
+RandomizedQuickSort	Increasing	50000	0.004
+RandomizedQuickSort	Increasing	60000	0.005
+RandomizedQuickSort	Increasing	70000	0.005
+RandomizedQuickSort	Increasing	80000	0.006
+RandomizedQuickSort	Increasing	90000	0.007
+RandomizedQuickSort	Increasing	100000	0.008
+Algorytm	Instancja	Elementy	Czas (s)
+RandomizedQuickSort	Decreasing	10000	0.001
+RandomizedQuickSort	Decreasing	20000	0.001
+RandomizedQuickSort	Decreasing	30000	0.002
+RandomizedQuickSort	Decreasing	40000	0.003
+RandomizedQuickSort	Decreasing	50000	0.004
+RandomizedQuickSort	Decreasing	60000	0.005
+RandomizedQuickSort	Decreasing	70000	0.006
+RandomizedQuickSort	Decreasing	80000	0.007
+RandomizedQuickSort	Decreasing	90000	0.008
+RandomizedQuickSort	Decreasing	100000	0.009
+Algorytm	Instancja	Elementy	Czas (s)
+RandomizedQuickSort	V-Shape	10000	0.001
+RandomizedQuickSort	V-Shape	20000	0.002
+RandomizedQuickSort	V-Shape	30000	0.002
+RandomizedQuickSort	V-Shape	40000	0.003
+RandomizedQuickSort	V-Shape	50000	0.004
+RandomizedQuickSort	V-Shape	60000	0.005
+RandomizedQuickSort	V-Shape	70000	0.006
+RandomizedQuickSort	V-Shape	80000	0.007
+RandomizedQuickSort	V-Shape	90000	0.007
+RandomizedQuickSort	V-Shape	100000	0.009
+
+
+Randomizowany quick sort to jedno z prostszych możliwych ulepszeń algorytmu quick sort.
+Obierając losową oś symetrii (pivot) mamy większą szansę na obranie osi bliżej środka tablicy, a kiedy tak się stanie, można powiedzieć, że rekursja rozkłada się lepiej i wykonuje szybciej. 
+Złożoność czasowa: О(n log(n))
+
+
+
+
+
+
+
+	HEAP SORT
+Algorytm	Instancja	Elementy	Czas (s)
+HeapSort	Random	10000	0.002
+HeapSort	Random	20000	0.004
+HeapSort	Random	30000	0.006
+HeapSort	Random	40000	0.008
+HeapSort	Random	50000	0.009
+HeapSort	Random	60000	0.011
+HeapSort	Random	70000	0.013
+HeapSort	Random	80000	0.016
+HeapSort	Random	90000	0.018
+HeapSort	Random	100000	0.021
+Algorytm	Instancja	Elementy	Czas (s)
+HeapSort	Increasing	10000	0.001
+HeapSort	Increasing	20000	0.002
+HeapSort	Increasing	30000	0.005
+HeapSort	Increasing	40000	0.006
+HeapSort	Increasing	50000	0.007
+HeapSort	Increasing	60000	0.01
+HeapSort	Increasing	70000	0.011
+HeapSort	Increasing	80000	0.013
+HeapSort	Increasing	90000	0.015
+HeapSort	Increasing	100000	0.016
+
+
+Algorytm	Instancja	Elementy	Czas (s)
+HeapSort	Decreasing	10000	0.001
+HeapSort	Decreasing	20000	0.002
+HeapSort	Decreasing	30000	0.004
+HeapSort	Decreasing	40000	0.006
+HeapSort	Decreasing	50000	0.008
+HeapSort	Decreasing	60000	0.009
+HeapSort	Decreasing	70000	0.011
+HeapSort	Decreasing	80000	0.012
+HeapSort	Decreasing	90000	0.014
+HeapSort	Decreasing	100000	0.016
+Algorytm	Instancja	Elementy	Czas (s)
+HeapSort	V-Shape	10000	0.002
+HeapSort	V-Shape	20000	0.003
+HeapSort	V-Shape	30000	0.005
+HeapSort	V-Shape	40000	0.006
+HeapSort	V-Shape	50000	0.007
+HeapSort	V-Shape	60000	0.01
+HeapSort	V-Shape	70000	0.011
+HeapSort	V-Shape	80000	0.013
+HeapSort	V-Shape	90000	0.014
+HeapSort	V-Shape	100000	0.017
+
+Algorytm sortowania przez kopcowanie składa się z dwóch faz. W pierwszej sortowane elementy reorganizowane są w celu utworzenia kopca. W drugiej zaś dokonywane jest właściwe sortowanie. 
+Heap sort prezentuje się nieco gorzej od algorytmu quick sort, jednak czasy są nadal bardzo dobre.
+Jego przewagą jest lepsza złożoność pesymistyczna wynosząca O (n log n), podczas gdy dla quick sort jest to O (n2), co jest nie do przyjęcia dla dużych zbiorów danych.
+
+
+
+
+
+
+
